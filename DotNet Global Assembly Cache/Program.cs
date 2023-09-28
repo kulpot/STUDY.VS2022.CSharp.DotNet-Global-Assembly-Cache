@@ -67,6 +67,72 @@ C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly 
                5 Dir(s)  487,875,502,080 bytes free
 
 
+C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly Cache>csc /t:library /out:Farm.dll Program.cs
+Microsoft (R) Visual C# Compiler version 4.7.0-3.23416.8 (43b0b05c)
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly Cache>dir
+ Volume in drive C has no label.
+ Volume Serial Number is DAE4-938D
+
+ Directory of C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly Cache
+
+28/09/2023  11:03 am    <DIR>          .
+28/09/2023  11:03 am    <DIR>          ..
+27/09/2023  03:37 pm               189 App.config
+27/09/2023  03:37 pm    <DIR>          bin
+27/09/2023  03:38 pm             2,406 DotNet Global Assembly Cache.csproj
+28/09/2023  11:03 am             3,584 Farm.dll
+28/09/2023  11:02 am               596 KulpotKey.key
+27/09/2023  03:37 pm    <DIR>          obj
+28/09/2023  11:02 am             3,141 Program.cs
+27/09/2023  03:37 pm    <DIR>          Properties
+               5 File(s)          9,916 bytes
+               5 Dir(s)  487,875,133,440 bytes free
+
+-----------gacutil -i Farm.dll-------------Fail
+C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly Cache>gacutil -i Farm.dll
+Microsoft (R) .NET Global Assembly Cache Utility.  Version 4.0.30319.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Failure adding assembly to the cache: Administrator permissions are needed to use the selected options. Use an administrator command prompt to complete these tasks.
+-------------------------------------------------
+-----------OVERWRITE: Farm.dll----------------------
+C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly Cache>csc /t:library /out:Farm.dll /keyfile:KulpotKey.key Program.cs
+Microsoft (R) Visual C# Compiler version 4.7.0-3.23416.8 (43b0b05c)
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly Cache>dir
+ Volume in drive C has no label.
+ Volume Serial Number is DAE4-938D
+
+ Directory of C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly Cache
+
+28/09/2023  11:06 am    <DIR>          .
+28/09/2023  11:06 am    <DIR>          ..
+27/09/2023  03:37 pm               189 App.config
+27/09/2023  03:37 pm    <DIR>          bin
+27/09/2023  03:38 pm             2,406 DotNet Global Assembly Cache.csproj
+28/09/2023  11:07 am             4,096 Farm.dll
+28/09/2023  11:02 am               596 KulpotKey.key
+27/09/2023  03:37 pm    <DIR>          obj
+28/09/2023  11:06 am             4,785 Program.cs
+27/09/2023  03:37 pm    <DIR>          Properties
+               5 File(s)         12,072 bytes
+               5 Dir(s)  487,880,777,728 bytes free
+
+------------------CDM Admin Required-----------
+search Developer Command Prompt for VS
+----------------------------------------------
+C:\Users\sunny\source\repos\DotNet Global Assembly Cache\DotNet Global Assembly Cache>gacutil -i Farm.dll
+Microsoft (R) .NET Global Assembly Cache Utility.  Version 4.0.30319.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Assembly successfully added to the cache
+
+
 
 
  * 
